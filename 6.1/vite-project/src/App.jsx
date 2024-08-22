@@ -107,27 +107,58 @@ import { useState } from 'react'
 
 //  wrapper components
 
-function App(){
-  return <div>
-  <CardWrapper innnerComponent = {<TextComponent />} />
-  </div>
-}
+// function App(){
+//   return <div>
+//   <CardWrapper innnerComponent = {<TextComponent />} />
+//   <br />
+//   <CardWrapper innnerComponent = {<TextComponent />} />
+//   <br />
+//   <CardWrapper innnerComponent = {<TextComponent />} />
+//   </div>
+// }
 
-function CardWrapper({innnerComponent}){
+// function CardWrapper({innnerComponent}){
 
-  //  create a div which has a border (hint: the way to create a border is border: 2px solid black)
-  // and inside the div, renders the prop
-    return <div style={{border: "2px solid black"} }>
-          {innnerComponent}
-      </div>
-}
+//   //  create a div which has a border (hint: the way to create a border is border: 2px solid black)
+//   // and inside the div, renders the prop
+//     return <div style={{border: "2px solid black", padding: "20px", width: "50%", textAlign:"center" } }>
+//           {innnerComponent}
+//       </div>
+// }
 
-function TextComponent() {
-  return <div>
-    <h2> hi there!</h2>
-  </div>
-}
+// function TextComponent() {
+//   return <div>
+//     <h2> hi there!</h2>
+//   </div>
+// }
+
+// export default App;
+
+// cleaner syntax
+
+// function App(){
+//   return <div>
+//   <CardWrapper>
+//       <h2>hi there!</h2>
+//       <p>hey there! there is a difference in the syntax but the execution s still the same no change in the output</p>
+//   </CardWrapper>
+//   </div>
+// }
+
+// function CardWrapper({children}){
+
+//   //  create a div which has a border (hint: the way to create a border is border: 2px solid black)
+//   // and inside the div, renders the prop
+//     return <div style={{border: "2px solid black", padding: "20px", width: "50%", textAlign:"center" } }>
+//           {children}
+//       </div>
+// }
 
 
+// export default App;
 
-export default App;
+
+// Hooks
+// lets you define state variable and updte them  
+// hooks in react are functions that allow you to "hook into" react state 
+// and lifecycle features from fucntion components.
