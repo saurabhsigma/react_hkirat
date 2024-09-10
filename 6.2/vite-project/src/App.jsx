@@ -55,18 +55,31 @@
 
 
 import { useState } from "react";
-import { useEffectd  } from "react";
+import { useEffect  } from "react";
+import axios from 'axios';
+
 
 function App(){
   return <div>
+  <button>1</button>
+  <button>2</button>
+  <button>3</button>
+  <button>4</button>
     <Todo id = {1} />
   </div>
 }
 
 function Todo({id}){
+  
   const [todos, setTodos] = useState({});
-
+   
   // your effect here
+  useEffect(() =>{
+    axios.get("https:/sum-server.100xdevs.com/todo?id=" +id)
+    .then(response =>{
+      setTodos(response.data.todo)
+    })
+  }, [])
 
   return <div>
     <h1>
