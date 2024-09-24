@@ -19,8 +19,7 @@
 // elegant solution
 
 // backend/db.js
-const mongoose = require('mongoose');
-const { number } = require('zod');
+const mongoose = require('mongoose'); 
 
 // Database connection function
 const connectDB = async () => {
@@ -29,7 +28,7 @@ const connectDB = async () => {
             useNewUrlParser: true,
             useUnifiedTopology: true,
            // To prevent deprecation warnings
-            serverSelectionTimeoutMS: 20000
+            serverSelectionTimeoutMS: 10000
         });
         console.log('Database connected successfully');
     } catch (error) {
